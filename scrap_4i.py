@@ -13,14 +13,15 @@ tree = html.fromstring(page.content)
 
 #listOfUni = tree.xpath('//table//tr/td/a/text()')
 
-listOfUni = tree.xpath('//td[@class="i"]/a/text()')
+uNames 	 = tree.xpath('//td[@class="i"]/a/text()')
+uAddress = tree.xpath('//td[@class="i"]/h5/text()')
 #print( listOfUni )
-
-print len(listOfUni)
 
 #for uni in listOfUni:
 #	print "Name: ", uni
 
+for index in range(len(uNames)):
+	print 'University Name: ', uNames[index], ' == Address: ',uAddress[index] 
 
 #listOfNames = tree.xpath('//table//tr/td/h5/text()')
 #print(listOfNames)
